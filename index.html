@@ -8,5 +8,19 @@
 </head>
 <body>
     <h1>Rock paper Scisscors</h1>
+
+    <script>
+    const chocies = ["Rock","Paper",'Scissors'];    
+
+      function computerPlay(){
+          const random = Math.floor(Math.random() * chocies.length)
+          computerChoce = (random, chocies[random]);
+          return computerChoce;
+
+
+      }  
+      console.log(computerPlay());
+
+    </script>
 </body>
 </html>
