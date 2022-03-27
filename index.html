@@ -11,15 +11,46 @@
 
     <script>
     const chocies = ["Rock","Paper",'Scissors'];    
-
+        // Computer randomly decided out of chocies we have in array 
       function computerPlay(){
           const random = Math.floor(Math.random() * chocies.length)
           computerChoce = (random, chocies[random]);
           return computerChoce;
+          }  
+      
+      
+      
 
 
-      }  
-      console.log(computerPlay());
+        let playerChoice = prompt("What do you pic?, please start with Capital");
+                   
+
+       computerPlay();
+       
+       console.log(computerChoce);
+       console.log(playerChoice);
+       let c = computerChoce;
+       console.log(c);
+
+       function gametime(c,playerChoice){
+           let p = playerChoice;
+           if(c==p){
+               return "It was a tie"
+           }else if(c == "Rock" && p == "Paper"){
+               return "Player wins, Paper beats Rock"}
+           else if (c == 'Paper' && p == "Rock"){
+                return 'Computer Wins, Paper beats Rock'
+           }else if (c == "Scissors" && p == "Rock"){
+                return 'Player wins, Rock beats Scisscors'
+           }else if (c == 'Rock' && p=="Scissors"){
+                return 'Computer Wins, Rock Beats Sciccors'
+           }else if (c== "Scissors" && p =="Paper"){
+               return "Computer wins, Sciccors beats paper "
+           }else if (p== "Scissors" && c =="Paper"){
+               return "Player Wins, Sciccors beats paper"     
+           
+       }};
+       console.log(gametime(c, playerChoice));
 
     </script>
 </body>
